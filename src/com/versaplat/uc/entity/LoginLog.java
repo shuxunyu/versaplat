@@ -1,4 +1,4 @@
-package com.my.versaplat.uc.entity;
+package com.versaplat.uc.entity;
 
 import java.io.Serializable;
 

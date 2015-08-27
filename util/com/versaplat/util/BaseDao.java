@@ -1,4 +1,4 @@
-package com.my.util;
+package com.versaplat.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

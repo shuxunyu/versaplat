@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="UC" >
+<insert id="insertLoginLog" parameterClass="map">
+		insert into uc_login_log(user_id,ip,login_time)
+		values (#user_id#,#ip#,#login_time#)
+		<selectKey resultClass="int" keyProperty="login_log_id" >
+		 	SELECT @@IDENTITY AS login_log_id 
+	 	</selectKey> 
+</insert>
+
+</sqlMap>
