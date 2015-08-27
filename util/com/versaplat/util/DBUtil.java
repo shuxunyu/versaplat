@@ -1,4 +1,4 @@
-package com.my.util;
+package com.versaplat.util;
 
 import java.util.HashMap;
 import java.util.List;

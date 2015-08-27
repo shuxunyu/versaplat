@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="UC" >
+<typeAlias alias="User" type="com.versaplat.entity.Category"/>
+
+<select id="getUserInfo" parameterClass="HashMap" resultClass="User">
+	SELECT user_id,user_name,password,credit,type,last_visit,last_ip FROM uc_user
+		<dynamic prepend="WHERE">
+		<isNotEmpty prepend="AND" property="user_id">
+		  	user_id=#user_id#
+		 </isNotEmpty>
+		 <isNotEmpty prepend="AND" property="user_name">
+			user_name=#user_name#
+		 </isNotEmpty>
+		 <isNotEmpty prepend="AND" property="password">
+			password=#password#
+		 </isNotEmpty>
+		 <isNotEmpty prepend="AND" property="credit">
+			credit=#credit#
+		 </isNotEmpty>
+		  <isNotEmpty prepend="AND" property="type">
+			type=#type#
+		 </isNotEmpty>
+		 <isNotEmpty prepend="AND" property="condition">
+			$condition$
+		 </isNotEmpty>
+		 <isNotEmpty prepend="order by" property="orderby">
+			$orderby$
+		 </isNotEmpty>
+		 <isNotEmpty prepend="limit" property="onlyone">
+			0,1
+		 </isNotEmpty>
+	</dynamic>
+</select>
+
+<update id="updateUserInfo" parameterClass="map">
+update uc_user 
+	<dynamic prepend="set"> 
+			 <isNotNull prepend=","  property="password">password=#password#</isNotNull>
+			 <isNotNull prepend=","  property="credit">credit=#credit#</isNotNull>
+			 <isNotNull prepend=","  property="type">type=#type#</isNotNull>
+			 <isNotNull prepend=","  property="last_visit">last_visit=#last_visit#</isNotNull>
+			 <isNotNull prepend=","  property="last_ip">last_ip=#last_ip#</isNotNull>
+	</dynamic>
+ where user_id=#user_id#
+</update>
+</sqlMap>

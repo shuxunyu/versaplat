@@ -2,6 +2,12 @@
 <!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
 "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
 <sqlMapConfig>
-<sqlMap resource="com/my/versaplat/dao/conf/Home.xml" />
+<settings cacheModelsEnabled="true" enhancementEnabled="true"
+       lazyLoadingEnabled="true" maxRequests="256" maxSessions="64"
+       maxTransactions="32" useStatementNamespaces="true"/>
+       
+<!-- UC -->      
+<sqlMap resource="com/versaplat/uc/dao/conf/User.xml" />
+<sqlMap resource="com/versaplat/uc/dao/conf/LoginLog.xml" />
 </sqlMapConfig>
 
