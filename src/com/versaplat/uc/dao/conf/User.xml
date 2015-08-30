@@ -3,7 +3,7 @@
 "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 
 <sqlMap namespace="UC" >
-<typeAlias alias="User" type="com.versaplat.entity.Category"/>
+<typeAlias alias="User" type="com.versaplat.uc.entity.User"/>
 
 <select id="getUserInfo" parameterClass="HashMap" resultClass="User">
 	SELECT user_id,user_name,password,credit,type,last_visit,last_ip FROM uc_user
