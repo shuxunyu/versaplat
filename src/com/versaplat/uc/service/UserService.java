@@ -50,5 +50,4 @@ public class UserService {
 		loginLogDao.insertLoginLog(param);
 		
 	}
-	
 }
