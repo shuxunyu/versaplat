@@ -40,7 +40,7 @@ CREATE TABLE `uc_user` (
 
 /*Data for the table `uc_user` */
 
-insert  into `uc_user`(`user_id`,`user_name`,`password`,`credit`,`type`,`last_visit`,`last_ip`) values (1,'admin','123456',NULL,9,NULL,NULL);
+insert  into `uc_user`(`user_id`,`user_name`,`password`,`credit`,`type`,`last_visit`,`last_ip`) values (1,'admin','123456',1,9,NULL,NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
